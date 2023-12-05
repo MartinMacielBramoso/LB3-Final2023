@@ -1,0 +1,47 @@
+Spring initialzr:
+-Spring data jpa
+-Spring web
+-Lombok
+-H2 Database
+
+Manuales:
+<dependency>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-test</artifactId>
+  <scope>test</scope>
+</dependency>
+<dependency>
+ <groupId>org.springdoc</groupId>
+ <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+ <version>2.1.0</version>
+</dependency>
+<dependency>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+<!--    Model Mapper dependency    -->
+<dependency>
+ <groupId>org.modelmapper</groupId>
+ <artifactId>modelmapper</artifactId>
+ <version>3.1.1</version>
+</dependency>
+
+
+springdoc.packages-to-scan=*package*.controllers
+springdoc.show-actuator=true
+springdoc.swagger-ui.disable-swagger-default-url=true
+# swagger-ui custom path
+springdoc.swagger-ui.path=/swagger-ui.html
+
+## Spring Data Source ##
+spring.datasource.url=jdbc:h2:mem:test;DB_CLOSE_ON_EXIT=FALSE
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+## Spring JPA ##
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.show-sql=true
+spring.jpa.defer-datasource-initialization=true
+
+#logging.level.root=TRACE
